@@ -1,3 +1,19 @@
 <% provide(:title, "Contact") %>
 <h1>Contact Me</h1>
-<p>Find me in app/views/me/contact.html.erb</p>
+
+<div class="row">
+	<div class="span6 block">
+		<h2>Say hello!</h2>
+
+		<%= form_tag("/contact", method: "post") do %>
+			<%= label_tag(:name, "Name:") %>
+			<%= text_field_tag(:name) %>
+
+			<%= label_tag(:email, "Email:") %>
+			<%= text_field_tag(:email) %>
+
+			<%= label_tag(:message, "Message:") %>
+			<%= text_area_tag(:message, '', size: "24x10") %>
+		<% end %>
+	</div>
+</div>

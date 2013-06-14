@@ -5,6 +5,9 @@ gem 'rails', '4.0.0.beta1'
 
 gem 'bootstrap-sass', '2.1'
 
+gem 'redcarpet'
+gem 'github-markup'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -22,7 +25,7 @@ end
 group :test do
   gem 'capybara', '1.1.2'
   gem 'rb-fsevent', '0.9.1', :require => false
-  gem 'growl', '1.0.3'
+  gem 'rspec-nc', '0.0.6'
 end
 
 gem 'jquery-rails'
