@@ -4,3 +4,5 @@
 require File.expand_path('../config/application', __FILE__)
 
 Juco::Application.load_tasks
+
+Rake.application.options.trace = true if %w(staging production).include?(Rails.env)
