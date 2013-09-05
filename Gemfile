@@ -8,8 +8,6 @@ gem 'bootstrap-sass', '2.1'
 gem 'redcarpet'
 gem 'github-markup'
 
-gem 'sqlite3'
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -27,6 +25,10 @@ group :test do
   gem 'capybara', '1.1.2'
   gem 'rb-fsevent', '0.9.1', :require => false
   gem 'rspec-nc', '0.0.6'
+end
+
+group :development do
+  'pg'
 end
 
 gem 'jquery-rails'
