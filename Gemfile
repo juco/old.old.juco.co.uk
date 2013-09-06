@@ -17,6 +17,7 @@ group :assets do
 end
 
 group :development, :test do
+  gem 'sqlite3'
   gem 'rspec-rails', '2.11.0'
   gem 'guard-rspec', '1.2.1'
 end
@@ -27,8 +28,8 @@ group :test do
   gem 'rspec-nc', '0.0.6'
 end
 
-group :development do
-  'pg'
+group :production do
+	gem 'pg'
 end
 
 gem 'jquery-rails'
