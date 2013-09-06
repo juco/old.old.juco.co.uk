@@ -30,6 +30,7 @@ end
 
 group :production do
 	gem 'pg'
+	gem 'rails_12factor' # Heroku thingy
 end
 
 gem 'jquery-rails'
