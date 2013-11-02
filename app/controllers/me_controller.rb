@@ -4,7 +4,4 @@ class MeController < ApplicationController
 
   def cv
   end
-
-  def contact
-  end
 end

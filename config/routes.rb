@@ -3,7 +3,9 @@ Juco::Application.routes.draw do
 
   get "/home", to: "me#home"
   get "/cv", to: "me#cv"
-  get "/contact", to: "me#contact"
+  # get "/contact", to: "me#contact"
+
+  resources :contact, only: [:index, :create]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
