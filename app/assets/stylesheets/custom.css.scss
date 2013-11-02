@@ -3,6 +3,7 @@
 /* mixins, variables, etc. */
 $grayMediumLight: #eaeaea;
 $jucoGreen: #b5cf5f;
+$lightGray: #999999;
 
 /* universal */
 
@@ -44,7 +45,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: $grayLight;
+  color: $lightGray;
 }
 
 p {

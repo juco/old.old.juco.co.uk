@@ -2,27 +2,29 @@
 <h1>Contact Me</h1>
 
 <div class="row">
-  <div class="span6 block">
-    <h2>Say hello!</h2>
-
+  <div class="span6 offset3">
     <% if @contact.errors.any? %>
       <% @contact.errors.full_messages.each do |msg| %>
         <p class="alert alert-error"><%= msg %></p>
       <% end %>
     <% end %>
 
-    <%= form_for(:contact, action: :create) do |f| %>
-      <%= f.label(:name, "Name:") %>
-      <%= f.text_field(:name) %>
+    <%= form_for(:contact, action: :create, html: { class: 'form-horizontal' }) do |f| %>
+      <legend>Say hello!</legend>
+      <div class="controls">
+        <%= f.label(:name, "Name:") %>
+        <%= f.text_field(:name) %>
 
-      <%= f.label(:email, "Email:") %>
-      <%= f.text_field(:email) %>
+        <%= f.label(:email, "Email:") %>
+        <%= f.text_field(:email) %>
 
-      <%= f.label(:message, "Message:") %>
-      <%= f.text_area(:message, size: "24x10") %>
-      <p>
-        <%= f.submit 'Send' %>
-      </p>
+        <%= f.label(:message, "Message:") %>
+        <%= f.text_area(:message, size: "24x10") %>
+
+        <p>
+          <%= f.submit 'Send' %>
+        </p>
+      </div>
     <% end %>
   </div>
 </div>
