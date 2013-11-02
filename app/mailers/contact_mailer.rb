@@ -4,13 +4,13 @@ class ContactMailer < ActionMailer::Base
 
   default from: 'me@juco.co.uk'
 
-  def contact_mail(name, email, message)
-    @name = name
-    @email = email
-    @message = message
+  def contact_mail(contact)
+    @name = contact.name
+    @email = contact.email
+    @message = contact.message
     mail(
       to: CONTACT_EMAIL,
-      subject: "Website contact from: " + name,
+      subject: "Website contact from: " + @name,
       template: 'mailers/contact'
     )
   end
