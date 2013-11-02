@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0.beta1'
 
-gem 'bootstrap-sass', '2.1'
+gem 'bootstrap-sass', '3.0'
 
 gem 'redcarpet'
 gem 'github-markup'

@@ -7,7 +7,7 @@
 
     <% if @contact.errors.any? %>
       <% @contact.errors.full_messages.each do |msg| %>
-        <p class="text-danger"><%= msg %></p>
+        <p class="alert alert-error"><%= msg %></p>
       <% end %>
     <% end %>
 
