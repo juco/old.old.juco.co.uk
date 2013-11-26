@@ -1,20 +1,6 @@
-<p id="notice"><%= notice %></p>
+<%= @blog.body_rendered.html_safe %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @blog.title %>
-</p>
-
-<p>
-  <strong>Body:</strong>
-  <%= @blog.body_rendered.html_safe %>
-</p>
-
-<p>
-  <strong>Author:</strong>
-  <%= @blog.author %>
-</p>
-
-
-<%= link_to 'Edit', edit_blog_path(@blog) %> |
-<%= link_to 'Back', blogs_path %>
+<% if user_signed_in? %>
+  <%= link_to 'Edit', edit_blog_path(@blog) %> |
+  <%= link_to 'Back', blogs_path %>
+<% end %>

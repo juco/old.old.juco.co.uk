@@ -4,9 +4,14 @@
 <div class="row">
   <div class="span6 offset3">
     <% if @contact.errors.any? %>
-      <% @contact.errors.full_messages.each do |msg| %>
-        <p class="alert alert-error"><%= msg %></p>
-      <% end %>
+      <div class="alert alert-error">
+        <ul>
+          <% @contact.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+
+          <% end %>
+        </ul>
+      </div>
     <% end %>
 
     <%= form_for(:contact, action: :create, html: { class: 'form-horizontal' }) do |f| %>

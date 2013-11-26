@@ -1,10 +1,9 @@
 <% provide(:title, "Blogs") %>
-<h1>Ramblings of a mad man</h1>
+<h1>Ramblings of a geek</h1>
 
-<div class="row-fluid">
+<div class="row span12">
   <% @blogs.each do |blog| %>
     <div class="span11 block">
-      <h4 class="blog-title"><%= blog.title %></h4>
       <p class="blog-body"><%= blog.body_rendered.html_safe %></p>
 
       <% if user_signed_in? %>
@@ -13,13 +12,13 @@
           <%= link_to 'Delete', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
         </p>
       <% end %>
+      <p><%= link_to 'View full', blog_path(blog) %></p>
     </div>
   <% end %>
 
-  <div class="span6">
+  <div class="span2">
     <% if user_signed_in? %>
       <%= link_to 'New Blog', new_blog_path %>
     <% end %>
   </div>
-
 </div>

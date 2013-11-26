@@ -5,7 +5,7 @@ class Contact
 
   attr_accessor :name, :email, :message 
   validates :name, presence: true, length: { minimum: 3 }
-  validates :email, presence: true, length: { minimum: 5 }
+  validates :email, length: { minimum: 5 }
   validates :email, format: { with: /\b[A-Z0-9._%a-z\-]+@(?:[A-Z0-9a-z\-]+\.)+[A-Za-z]{2,4}\z/ }
   validates :message, presence: true, length: { minimum: 5 }
 
