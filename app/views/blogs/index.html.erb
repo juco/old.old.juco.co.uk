@@ -5,8 +5,7 @@
   <% @blogs.each do |blog| %>
     <div class="span11 block">
       <h4 class="blog-title"><%= blog.title %></h4>
-      <% blog.body = blog.body[0..500] << "..." if blog.body.length >= 100 %>
-      <p class="blog-body"><%= markup(blog.body).html_safe %></p>
+      <p class="blog-body"><%= blog.body.html_safe %></p>
       <p class="blog-actions">
         <%= link_to 'Edit', edit_blog_path(blog) %>
         <%= link_to 'Delete', blog, method: :delete, data: { confirm: 'Are you sure?' } %>

@@ -1,12 +1,14 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0.beta1'
+gem 'rails', '4.0.0'
 
 gem 'bootstrap-sass', '2.1'
 
+# Github markdown
 gem 'redcarpet'
-gem 'github-markup'
+# Python syntax highlight lib
+gem 'pygmentize'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -20,6 +22,10 @@ group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails', '2.11.0'
   gem 'guard-rspec', '1.2.1'
+
+  # Better errors
+  gem 'binding_of_caller'
+  gem 'better_errors'
 end
 
 group :test do
@@ -29,8 +35,8 @@ group :test do
 end
 
 group :production do
-	gem 'pg'
-	gem 'rails_12factor' # Heroku thingy
+  gem 'pg'
+  gem 'rails_12factor' # Heroku thingy
 end
 
 gem 'jquery-rails'
@@ -39,7 +45,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.0.1'
+#gem 'jbuilder', '~> 1.0.1'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
