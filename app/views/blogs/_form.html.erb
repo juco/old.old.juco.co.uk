@@ -11,19 +11,16 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :body %><br />
-    <%= f.text_area :body %>
-  </div>
-  <div class="field">
-    <%= f.label :author %><br />
-    <%= f.number_field :author %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <fieldset>
+      <%= f.label :title %><br />
+      <%= f.text_field :title %>
+      <%= f.label :body %><br />
+      <%= f.text_area :body, rows: 20, class: 'input-block-level span12' %>
+      <%= f.label :author %><br />
+      <%= f.number_field :author %>
+      <p>
+        <%= f.submit %>
+      </p>
+  </fieldset>
+
 <% end %>
