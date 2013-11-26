@@ -5,16 +5,21 @@
   <% @blogs.each do |blog| %>
     <div class="span11 block">
       <h4 class="blog-title"><%= blog.title %></h4>
-      <p class="blog-body"><%= blog.body.html_safe %></p>
-      <p class="blog-actions">
-        <%= link_to 'Edit', edit_blog_path(blog) %>
-        <%= link_to 'Delete', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
-      </p>
+      <p class="blog-body"><%= blog.body_rendered.html_safe %></p>
+
+      <% if user_signed_in? %>
+        <p class="blog-actions">
+          <%= link_to 'Edit', edit_blog_path(blog) %>
+          <%= link_to 'Delete', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </p>
+      <% end %>
     </div>
   <% end %>
 
   <div class="span6">
-    <%= link_to 'New Blog', new_blog_path %>
+    <% if user_signed_in? %>
+      <%= link_to 'New Blog', new_blog_path %>
+    <% end %>
   </div>
 
 </div>

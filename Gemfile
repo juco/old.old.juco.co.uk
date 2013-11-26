@@ -10,6 +10,10 @@ gem 'redcarpet'
 # Python syntax highlight lib
 gem 'pygmentize'
 
+gem 'mongoid', github: 'mongoid/mongoid'
+
+gem 'devise'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -19,7 +23,7 @@ group :assets do
 end
 
 group :development, :test do
-  gem 'sqlite3'
+  # gem 'sqlite3'
   gem 'rspec-rails', '2.11.0'
   gem 'guard-rspec', '1.2.1'
 
@@ -35,7 +39,7 @@ group :test do
 end
 
 group :production do
-  gem 'pg'
+  # gem 'pg'
   gem 'rails_12factor' # Heroku thingy
 end
 

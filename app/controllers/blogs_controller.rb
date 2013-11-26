@@ -1,6 +1,8 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
 
+  before_filter :authenticate_user!, except: [:index, :show]
+
   # GET /blogs
   # GET /blogs.json
   def index
@@ -24,7 +26,7 @@ class BlogsController < ApplicationController
   # POST /blogs
   # POST /blogs.json
   def create
-    @blog = Blog.new(blog_params)
+    @blog = Blog.new(blog_params.merge(author: current_user.id))
 
     respond_to do |format|
       if @blog.save
@@ -41,7 +43,7 @@ class BlogsController < ApplicationController
   # PATCH/PUT /blogs/1.json
   def update
     respond_to do |format|
-      if @blog.update(blog_params)
+      if @blog.update(blog_params.merge(author: current_user.id))
         format.html { redirect_to @blog, notice: 'Blog was successfully updated.' }
         format.json { head :no_content }
       else

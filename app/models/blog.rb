@@ -1,4 +1,11 @@
-class Blog < ActiveRecord::Base
+class Blog
+  include Mongoid::Document
+
+  field :title, type: String
+  field :body, type: String
+  field :body_rendered, type: String
+  field :author, type: Integer
+
   before_save :markdown_body
 
   private
@@ -6,7 +13,7 @@ class Blog < ActiveRecord::Base
     require 'redcarpet'
     renderer = PygmentizeHTML
     redcarpet = Redcarpet::Markdown.new(renderer, fenced_code_blocks: true)
-    self.body = redcarpet.render self.body
+    self.body_rendered = redcarpet.render self.body
   end
 
 end
