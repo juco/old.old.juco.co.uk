@@ -2,11 +2,14 @@ class User
   include Mongoid::Document
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, 
-          # Remove in production
-          :registerable,
-          :recoverable, :rememberable, :trackable, :validatable
-
+  # devise_options = [:database_authenticatable, :recoverable, :rememberable, :trackable, :validatable]
+  # if Rails.env.production? devise_options.push :registerable
+  if Rails.env.production?
+    devise :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable
+  else
+    devise :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable, :registerable
+  end
+  
   ## Database authenticatable
   field :email,              :type => String, :default => ""
   field :encrypted_password, :type => String, :default => ""
