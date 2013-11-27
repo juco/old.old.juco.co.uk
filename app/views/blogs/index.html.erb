@@ -3,7 +3,7 @@
 
 <div class="row span12">
   <% @blogs.each do |blog| %>
-    <div class="span11 block">
+    <div class="span11 block padded-block">
       <p class="blog-body"><%= blog.body_rendered.html_safe %></p>
 
       <% if user_signed_in? %>
