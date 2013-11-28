@@ -4,7 +4,10 @@ class Blog
   field :title, type: String
   field :body, type: String
   field :body_rendered, type: String
-  field :author, type: Integer
+  field :author_id, type: Integer
+
+  validates :title, length: { minimum: 3 }
+  validates :body, presence: true
 
   before_save :markdown_body
 

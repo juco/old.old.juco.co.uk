@@ -1,7 +1,5 @@
-class ContactMailer < ActionMailer::Base
-  
+class ContactMailer < ActionMailer::Base  
   CONTACT_EMAIL = 'julian@juco.co.uk'
-
   default from: 'me@juco.co.uk'
 
   def contact_mail(contact)
