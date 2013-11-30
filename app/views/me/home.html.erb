@@ -1,9 +1,11 @@
-<% provide(:title, "Home") %>
+<% provide(:title, 'Home') %>
 <h1>Julian Cohen</h1>
 
 <div class="row-fluid">
 	<div class="span3 offset1 block padded-block">
-		<%= link_to image_tag('me.jpg', class: "photo-me", width: 220), alt: "Julian Cohen" %>
+		<a href="http://www.juco.co.uk">
+            <%= image_tag 'me.jpg', :class => 'photo-me', :width => 220, :alt => 'Julian Cohen' %>
+        </a>
 	</div>
 
 	<div class="span5 offset1 block padded-block">
@@ -14,9 +16,9 @@
 			I love to <a href="http://github.com/juco">code</a> and gain
 			as many <a href="http://coderwall.com/juco">achievements</a> as possible and am
 			currently working as a <a href="http://uk.linkedin.com/in/cohenjulian">Lead Developer</a> at
-			<a href="http://www.pure360.com">Pure360.com</a>. If i'm not working and am sat in front of
-			a computer i'm often <a href="http://stackoverflow.com/users/1477466/juco">helping others</a>
-			or idling on <a href="http://freenode.net/">IRC</a>.
+			<a href="http://www.pure360.com">Pure360.com</a>. When not working I am often sat in front of
+			my computer <a href="http://stackoverflow.com/users/1477466/juco">helping others</a>
+			or idling around <a href="http://freenode.net/">IRC</a>.
 		</p>
         <p>
             <h4>Zend Certified</h4>
@@ -24,11 +26,21 @@
         </p>
         <p>
             <h4>Follow me</h4>
-            <%= image_tag 'social/linkedin.png' %>
-            <%= image_tag 'social/facebook.png' %>
-            <%= image_tag 'social/stackoverflow.png' %>
-            <%= image_tag 'social/github.png' %>
-            <%= image_tag 'social/coderwall.png' %>
+            <a href="http://uk.linkedin.com/in/cohenjulian/" target="_blank">
+              <%= image_tag 'social/linkedin.png' %>
+            </a>
+            <a href="https://www.facebook.com/julian.cohen.5" target="_blank">
+              <%= image_tag 'social/facebook.png' %>
+            </a>
+            <a href="http://stackoverflow.com/users/1477466/juco" target="_blank">
+              <%= image_tag 'social/stackoverflow.png' %>
+            </a>
+            <a href="http://github.com/juco" target="_blank">
+              <%= image_tag 'social/github.png' %>
+            </a>
+            <a href="http://coderwall.com/juco" target="_blank">
+              <%= image_tag 'social/coderwall.png' %>
+            </a>
         </p>
 	</div>
 </div>

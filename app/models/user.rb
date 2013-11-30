@@ -4,6 +4,8 @@ class User
   # :confirmable, :lockable, :timeoutable and :omniauthable
   # devise_options = [:database_authenticatable, :recoverable, :rememberable, :trackable, :validatable]
   # if Rails.env.production? devise_options.push :registerable
+
+  # Prevent signup in production
   if Rails.env.production?
     devise :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable
   else
