@@ -30,6 +30,11 @@ group :development, :test do
   # Better errors
   gem 'binding_of_caller'
   gem 'better_errors'
+
+  # Deployment
+  gem 'capistrano', '3.0.1'
+  gem 'capistrano-rails', '1.1.0'
+  gem 'capistrano-rvm', '0.1.0'
 end
 
 group :test do

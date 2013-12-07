@@ -8,7 +8,10 @@ development:
 production:
   sessions:
     default:
-      uri: <%= ENV['MONGOLAB_URI'] %>
-      options:
-        safe: true
-        skip_version_check: true
+      database: juco-rails
+      hosts:
+        - localhost:27017
+#      uri: <%= ENV['MONGOLAB_URI'] %>
+#      options:
+#        safe: true
+#        skip_version_check: true
