@@ -3,7 +3,7 @@ set :repo_url, 'https://github.com/juco/juco.co.uk.git'
 
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
-set :deploy_to, '/home/juco/rails/juco.co.uk'
+set :deploy_to, '/home/juco/www/juco.co.uk'
 set :scm, :git
 
 set :format, :pretty
