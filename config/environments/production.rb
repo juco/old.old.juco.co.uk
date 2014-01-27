@@ -78,6 +78,10 @@ Juco::Application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_donelivery_errors = true
+  config.action_mailer.default_options = {from: 'website@juco.co.uk'}
+
   #ActionMailer::Base.smtp_settings = {
   #  :address        => 'smtp.sendgrid.net',
   #  :port           => '587',

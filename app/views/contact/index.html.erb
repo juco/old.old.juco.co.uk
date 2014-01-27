@@ -8,14 +8,13 @@
           <ul>
               <% @contact.errors.full_messages.each do |msg| %>
                   <li><%= msg %></li>
-
               <% end %>
           </ul>
       </div>
     </span>
     <% end %>
     <div class="span10">
-        <%= form_for(:contact, action: :create, html: { class: 'form-horizontal' }) do |f| %>
+        <%= form_for(:contact, action: :create, html: {class: 'form-horizontal'}) do |f| %>
             <div class="controls block padded-block">
                 <%= f.label(:name, "Name:") %>
                 <%= f.text_field(:name, class: 'span7') %>

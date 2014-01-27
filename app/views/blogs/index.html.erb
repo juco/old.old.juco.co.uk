@@ -3,17 +3,7 @@
 
 <div class="row span12">
   <% @blogs.each do |blog| %>
-    <div class="span11 block padded-block">
-      <p class="blog-body"><%= blog.body_rendered.html_safe %></p>
-
-      <% if user_signed_in? %>
-        <p class="blog-actions">
-          <%= link_to 'Edit', edit_blog_path(blog) %>
-          <%= link_to 'Delete', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
-        </p>
-      <% end %>
-      <p><%= link_to 'View full', blog_path(blog) %></p>
-    </div>
+    <%= render 'blogs/blog', blog: blog %>
   <% end %>
 
   <div class="span2">

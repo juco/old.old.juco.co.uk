@@ -3,10 +3,10 @@
     <div class="container">
       <nav>
         <ul class="nav">
-          <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "CV", cv_path %></li>
-          <li><%= link_to "Blog", blogs_path %></li>
-          <li><%= link_to "Contact", contact_index_path %></li>
+          <li class="home"><a href="<%= root_path %>" data-toggle="tab">Home</a></li>
+          <li class="cv"><a href="<%= cv_path %>" data-toggle="tab">CV</a></li>
+          <li class="blogs"><%= link_to "Blog", blogs_path %></li>
+          <li class="contact"><%= link_to "Contact", contact_index_path %></li>
         </ul>
       </nav>
     </div>
