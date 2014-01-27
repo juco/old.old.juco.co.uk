@@ -11,7 +11,7 @@ set :format, :pretty
 # set :pty, true
 
 # set :linked_files, %w{config/database.yml}
-set :linked_dirs, %w{bin log public config public/assets}
+set :linked_dirs, %w{bin log public config}
 
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 set :keep_releases, 5
