@@ -1,15 +1,16 @@
 /* Skills */
 .skillsInfo {
   margin:10px 0 0px 0;
-}
-.skillsInfo em {
-  position:relative;
-  margin-bottom:2px;
-  font-size:13px;
-  color:#292929;
-  font-family:"Oswald", Arial, Helvetica, sans-serif;
-  font-weight:400;
-  font-style:normal;
+
+  em {
+    position:relative;
+    margin-bottom:2px;
+    font-size:13px;
+    color:#292929;
+    font-family:"Oswald", Arial, Helvetica, sans-serif;
+    font-weight:400;
+    font-style:normal;
+  }
 }
 .skill-container {
   background-color:transparent;
