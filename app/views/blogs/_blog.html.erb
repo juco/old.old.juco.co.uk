@@ -7,6 +7,6 @@
           <%= link_to 'Delete', blog, :method => :delete, class: 'btn btn-danger', confirm: 'Are you sure?' %>
       </div>
     <% end %>
-    <p><small>Posted on: <%= blog.date_created.strftime('%d/%m/%Y %H:%M') %></small></p>
+    <p class="muted"><small>Posted on: <%= blog.date_created.strftime('%d/%m/%Y %H:%M') %></small></p>
     <p><%= link_to 'View full', blog_path(blog) %></p>
 </div>
