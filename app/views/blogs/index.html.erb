@@ -1,7 +1,7 @@
 <% provide(:title, "Blogs") %>
 <h1>Ramblings of a geek</h1>
 
-<div class="row span12">
+<div class="blog-index row span12">
   <% @blogs.each do |blog| %>
     <%= render 'blogs/blog', blog: blog %>
   <% end %>

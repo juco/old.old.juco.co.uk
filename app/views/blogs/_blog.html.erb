@@ -1,12 +1,11 @@
-<div class="span11 block padded-block">
-    <p class="blog-body"><%= blog.body_rendered.html_safe %></p>
+<div class="span11 block padded-block <%= if blog.draft? then 'draft' end %>">
+  <p class="blog-body"><%= blog.body_rendered.html_safe %></p>
 
-    <% if user_signed_in? %>
-      <div class="btn-group">
-          <%= link_to 'Edit', edit_blog_path(blog), class: 'btn' %>
-          <%= link_to 'Delete', blog, :method => :delete, class: 'btn btn-danger', confirm: 'Are you sure?' %>
-      </div>
-    <% end %>
-    <p class="muted"><small>Posted on: <%= blog.date_created.strftime('%d/%m/%Y %H:%M') %></small></p>
-    <p><%= link_to 'View full', blog_path(blog) %></p>
+  <% if user_signed_in? %>
+    <div class="btn-group">
+      <%= link_to 'Edit', edit_blog_path(blog), class: 'btn' %>
+      <%= link_to 'Delete', blog, :method => :delete, class: 'btn btn-danger', confirm: 'Are you sure?' %>
+    </div>
+  <% end %>
+  <p class="muted"><small>Posted on: <%= blog.date_created.strftime('%d/%m/%Y %H:%M') %></small></p>
 </div>

@@ -15,6 +15,9 @@
     <%= f.label :body %><br />
     <%= f.text_area :body, rows: 20, class: 'input-block-level span12' %>
     <p>
+      <%= f.check_box :status %> Draft?
+    </p>
+    <p>
       <%= f.submit class: 'btn btn-primary' %>
     </p>
   </fieldset>

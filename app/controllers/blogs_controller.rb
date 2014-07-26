@@ -6,7 +6,8 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.all.order_by date_created: :desc
+    @blogs = Blog.order_by date_created: :desc
+    @blogs = @blogs.where(:status => Blog::STATUS_ACTIVE) unless user_signed_in?
   end
 
   # GET /blogs/1
@@ -72,6 +73,6 @@ class BlogsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_params
-      params.require(:blog).permit(:title, :body)
+      params.require(:blog).permit(:title, :body, :status)
     end
 end

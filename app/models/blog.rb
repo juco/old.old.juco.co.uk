@@ -2,10 +2,14 @@ class Blog
   include Mongoid::Document
   include Mongoid::Timestamps
 
+  STATUS_ACTIVE = 0
+  STATUS_DRAFT = 1
+
   field :title, type: String
   field :body, type: String
   field :body_rendered, type: String
   field :user_id, type: Integer
+  field :status, type: Integer
   field :date_created, type: DateTime
 
   belongs_to :user
@@ -15,6 +19,10 @@ class Blog
 
   before_save :markdown_body
   before_create :timestamps
+
+  def draft?
+    self.status == STATUS_DRAFT
+  end
 
   private
   def markdown_body
