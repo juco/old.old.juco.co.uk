@@ -2,8 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.blog-index {
-  .draft {
-    background-color: #F0F0F0;
-  }
+.blog-block.draft {
+  background-color: #F0F0F0;
 }

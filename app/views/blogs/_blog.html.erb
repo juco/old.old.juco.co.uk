@@ -1,4 +1,4 @@
-<div class="span11 block padded-block <%= if blog.draft? then 'draft' end %>">
+<div class="span11 block padded-block blog-block <%= if blog.draft? then 'draft' end %>">
   <p class="blog-body"><%= blog.body_rendered.html_safe %></p>
 
   <% if user_signed_in? %>
