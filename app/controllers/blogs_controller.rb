@@ -6,7 +6,7 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.order_by date_created: :desc
+    @blogs = Blog.order_by(date_created: :desc)
     @blogs = @blogs.where(:status => Blog::STATUS_ACTIVE) unless user_signed_in?
   end
 
